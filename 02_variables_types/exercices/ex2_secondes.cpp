@@ -15,7 +15,16 @@
 #include <iostream>
 
 int main() {
-    // TODO
+    int secondes;
+    std::cout << "Entrez un nombre de secondes : ";
+    std::cin >> secondes;
+    
+    int heures = secondes / 3600;
+    int minutes = secondes / 60 - (heures*3600)/60;
+    int secondes_restantes = secondes % 60;
+    
+    
+    std::cout << heures << " , " << minutes << " , " << secondes_restantes;
 
     return 0;
 }

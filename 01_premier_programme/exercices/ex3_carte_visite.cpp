@@ -21,7 +21,25 @@
 #include <string>
 
 int main() {
-    // TODO
+    // Demande Nom, Prénom, Ville
+    std::string FirstName;
+    std::cout << "Votre Prenom : ";
+    std::cin >> FirstName;
+    
+    std::string LastName;
+    std::cout << "Votre Nom : ";
+    std::cin >> LastName;
+    
+    std::string CityName;
+    std::cout << "Votre ville : ";
+    std::cin >> CityName;
+    
+    
+    std::cout << "+-------------------------------+\n";
+    std::cout << "| Prenom  : " << FirstName << " |\n";
+    std::cout << "| Nom     : " << LastName << "  |\n";
+    std::cout << "| Ville   : " << CityName << "  |\n";
+    std::cout << "+-------------------------------+";
 
     return 0;
 }

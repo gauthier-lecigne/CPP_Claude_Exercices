@@ -18,7 +18,12 @@
 #include <iostream>
 
 int main() {
-    // TODO
+    double temp_cel;
+    std::cout << "Votre temperature en degres Celsius : ";
+    std::cin >> temp_cel;
+    
+    std::cout << temp_cel << " degres Celsius equivaut en Fahrenheit a : " << ((temp_cel * 9) / 5) + 32 <<" degres.\n";
+    std::cout << temp_cel << " degres Celsius equivaut en Kelvin a : " << temp_cel + 273.15 <<" degres\n";
 
     return 0;
 }
