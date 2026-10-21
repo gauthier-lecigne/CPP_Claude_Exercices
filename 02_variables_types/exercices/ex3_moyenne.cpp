@@ -18,9 +18,24 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 int main() {
-    // TODO
+    int note1, note2, note3;
+    
+    std::cout << "Note 1 : ";
+    std::cin >> note1;
+    
+    std::cout << "Note 2 : ";
+    std::cin >> note2;
+    
+    
+    std::cout << "Note 3 : ";
+    std::cin >> note3;
+    
+    double moyenne = (note1 + note2 + note3) / 3.0;
+    std::cout << std::fixed << std::setprecision(2); // Fixed pour apres la virgule et precision pour le nb de chiffres (ici deux apres virgule)
+    std::cout << "Votre moyenne est de : " << moyenne << "\n";
 
     return 0;
 }

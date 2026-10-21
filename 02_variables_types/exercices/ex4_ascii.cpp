@@ -22,7 +22,16 @@
 #include <iostream>
 
 int main() {
-    // TODO
-
+    char Lettre;
+    std::cout << "Veuillez entrer une lettre en majuscule : ";
+    std::cin >> Lettre;
+    
+    std::cout << "Code ASCII : " << static_cast<int>(Lettre) << "\n";
+    
+    char LettreSuivante = Lettre + 1;
+    std::cout << "Lettre suivante : " << static_cast<char>(LettreSuivante) << "\n";
+    
+    char minuscule = Lettre + 32;
+    std::cout << "En minuscule : " << static_cast<char>(minuscule) << "\n";
     return 0;
 }
