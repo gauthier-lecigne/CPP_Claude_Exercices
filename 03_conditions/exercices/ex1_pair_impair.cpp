@@ -25,9 +25,18 @@ int main() {
     bool PAIR = (chiffre % 2 == 0);
     
     if (PAIR) {
-        std::cout << "Votre chiffre est pair";
+        std::cout << "Votre chiffre est pair" << "\n";
     } else {
-        std::cout << "Votre chiffre est impair";
+        std::cout << "Votre chiffre est impair" << "\n";
+    }
+    
+    
+    if (chiffre < 0) {
+        std::cout << "Votre chiffre est negatif" << "\n";
+    } else if (chiffre > 0) {
+        std::cout << "Votre chiffre est positif" << "\n";
+    } else {
+        std::cout << "Votre chiffre est nul" << "\n";
     }
 
     return 0;
