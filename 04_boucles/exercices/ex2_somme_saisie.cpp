@@ -23,7 +23,28 @@
 #include <iostream>
 
 int main() {
-    // TODO
+    int chiffre;
+    int nombre_s = 0;
+    int somme = 0;
+    double moyenne = 0.0;
+    int max = 0;
+    do {
+        std::cout << "Entrez un chiffre : ";
+        std::cin >> chiffre;
+        if (chiffre != 0) {
+            nombre_s += 1;
+            somme = somme + chiffre;
+            if (nombre_s == 1 || chiffre > max) {
+                max = chiffre;
+            }
+        }
+    } while (chiffre != 0);
+
+    if (nombre_s == 0) {
+        std::cout << "Aucun nombre saisi";
+    } else {
+        std::cout << nombre_s << " nombres,  " << " somme = " <<  somme << ", moyenne = " << somme / nombre_s << ", max = " << max;
+    }
 
     return 0;
 }
