@@ -16,9 +16,25 @@
  */
 
 #include <iostream>
+#include <iomanip>
 
 int main() {
-    // TODO
+    int table;
+    std::cout << "Entrer un nombre : ";
+    std::cin >> table;
+    
+    for (int i=1; i < 11; i++) {
+        std::cout << std::setw(4) << table << " x " << i << " = " << table * i << "\n";
+    }
+    
+    std::cout << "Maintenant le bonus" << "\n";
+    
+    for (int i = 1; i < 11; i++) {
+        for (int j = 1; j < 11; j++) {
+            std::cout << std::setw(4) << j * i << " ";
+        }
+        std::cout << "\n";
+    }
 
     return 0;
 }
