@@ -27,7 +27,34 @@
 #include <iostream>
 
 int main() {
-    // TODO
+    double nombre1,nombre2;
+    char opera;
+    
+    std::cout << "votre operation : ";
+    std::cin >> nombre1 >> opera >> nombre2;
+    
+    switch (opera)
+    {
+    case '+':
+        std::cout << nombre1 + nombre2 << "\n";
+        break;
+    case '-':
+        std::cout << nombre1 - nombre2 << "\n";
+        break;
+    case '*':
+        std::cout << nombre1 * nombre2 << "\n";
+        break;
+    case '/':
+        if (nombre2 == 0) {
+            std::cout << "Le diviseur ne peut pas etre 0" << "\n";
+        } else {
+            std::cout << nombre1 / nombre2 << "\n";
+        }
+        break;
+    default:
+        std::cout << "Operateur non reconnu" << "\n";
+        break;
+    }
 
     return 0;
 }
