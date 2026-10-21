@@ -31,9 +31,27 @@ int main() {
     std::mt19937 gen(rd());
     std::uniform_int_distribution<int> dist(1, 100);
     int secret = dist(gen);
+    int guess;
+    int nb_essais = 0;
 
-    // TODO
-    (void)secret;   // supprime cette ligne quand tu utilises secret
-
+    do  {
+        std::cout << "Votre chiffre : ";
+        std::cin >> guess;
+        nb_essais += 1;
+        if (guess < secret) {
+            std::cout << "Trop Petit." << "\n";
+        } else if (guess > secret) {
+            std::cout << "Trop Grand." << "\n";
+        } else {
+            std::cout << "Bravo, vous avez gagne en " << nb_essais << " essais\n";
+        }
+        if (nb_essais == 7) {
+            if (guess != secret) {
+                std::cout << "Perdu le chiffre etait " << secret << "\n";
+                break;
+            }
+        }
+    } while (guess != secret);
+    
     return 0;
 }
