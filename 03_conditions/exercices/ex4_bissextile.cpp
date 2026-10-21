@@ -20,7 +20,17 @@
 #include <iostream>
 
 int main() {
-    // TODO
+    int annee;
+    std::cout << "Annee : ";
+    std::cin >> annee;
+    
+    bool estBissextile = (annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0;
+    
+    if (estBissextile) {
+        std::cout << "Bissextile" << "\n";
+    } else {
+        std::cout << "Non Bissextile" << "\n";
+    }
 
     return 0;
 }
