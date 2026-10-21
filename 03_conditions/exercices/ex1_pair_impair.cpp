@@ -18,7 +18,17 @@
 #include <iostream>
 
 int main() {
-    // TODO
+    int chiffre;
+    std::cout << "Votre chiffre : ";
+    std::cin >> chiffre;
+    
+    bool PAIR = (chiffre % 2 == 0);
+    
+    if (PAIR) {
+        std::cout << "Votre chiffre est pair";
+    } else {
+        std::cout << "Votre chiffre est impair";
+    }
 
     return 0;
 }
