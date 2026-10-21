@@ -21,7 +21,23 @@
 #include <iostream>
 
 int main() {
-    // TODO
+    double note;
+    std::cout << "Votre note : ";
+    std::cin >> note;
+    
+    if (note < 0 || note > 20) {
+        std::cout << "Note invalide" << "\n";
+    } else if (note < 10) {
+        std::cout << "Ajourne" << "\n";
+    } else if (note < 12) {
+        std::cout << "Admis" << "\n";
+    } else if (note < 14) {
+        std::cout << "Assez bien" << "\n";
+    } else if (note < 16) {
+        std::cout << "Bien" << "\n";
+    } else {
+        std::cout << "Tres bien" << "\n";
+    }
 
     return 0;
 }
