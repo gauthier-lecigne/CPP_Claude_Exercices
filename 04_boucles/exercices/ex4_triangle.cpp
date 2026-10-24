@@ -47,7 +47,7 @@ int main() {
     std::cout << "\n";
     
     //triangle inversee
-    for (int i = hauteur; i >= 0; i--) {
+    for (int i = hauteur; i > 0; i--) {
         for (int j = 1; j <= i; j++) {
             std::cout << "*";
         }
