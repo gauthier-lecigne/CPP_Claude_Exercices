@@ -20,13 +20,34 @@
 
 #include <iostream>
 
-// TODO : écris tes fonctions ici
+int maximum(int a, int b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+int maximum(int a, int b, int c) {
+    return maximum(maximum(a,b),c);
+}
+
+
+int valeurAbsolue(int x) {
+    if (x < 0) {
+        return -x;
+    } else {
+        return x;
+    }
+}
+
+
 
 int main() {
-    // std::cout << "maximum(3, 8) = " << maximum(3, 8) << std::endl;
-    // std::cout << "maximum(-1, -5) = " << maximum(-1, -5) << std::endl;
-    // std::cout << "maximum(4, 9, 2) = " << maximum(4, 9, 2) << std::endl;
-    // std::cout << "valeurAbsolue(-7) = " << valeurAbsolue(-7) << std::endl;
-    // std::cout << "valeurAbsolue(3) = " << valeurAbsolue(3) << std::endl;
+    std::cout << "maximum(3, 8) = " << maximum(3, 8) << std::endl;
+    std::cout << "maximum(-1, -5) = " << maximum(-1, -5) << std::endl;
+    std::cout << "maximum(4, 9, 2) = " << maximum(4, 9, 2) << std::endl;
+    std::cout << "valeurAbsolue(-7) = " << valeurAbsolue(-7) << std::endl;
+    std::cout << "valeurAbsolue(3) = " << valeurAbsolue(3) << std::endl;
     return 0;
 }
