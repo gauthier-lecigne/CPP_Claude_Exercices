@@ -25,12 +25,39 @@
 
 #include <iostream>
 
-// TODO
+long long factorielle(int n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorielle(n-1);
+    }
+}
+
+
+int puissance(int base, int exposant) {
+    if (exposant <= 0) {
+        return 1;
+    } else {
+        return base * puissance(base, exposant-1);
+    }
+}
+
+
+int sommeChiffres(int n) {
+    if (n <= 0) {
+        return 0;
+    } else {
+        return n % 10 + sommeChiffres(n / 10);
+    }
+}
+
 
 int main() {
-    // std::cout << "5! = " << factorielle(5) << std::endl;
-    // std::cout << "20! = " << factorielle(20) << std::endl;
-    // std::cout << "2^10 = " << puissance(2, 10) << std::endl;
-    // std::cout << "sommeChiffres(1234) = " << sommeChiffres(1234) << std::endl;
+    std::cout << "5! = " << factorielle(5) << std::endl;
+    std::cout << "20! = " << factorielle(20) << std::endl;
+    std::cout << "2^10 = " << puissance(2, 10) << std::endl;
+    std::cout << "sommeChiffres(1234) = " << sommeChiffres(1234) << std::endl;
     return 0;
 }
+ 
+
