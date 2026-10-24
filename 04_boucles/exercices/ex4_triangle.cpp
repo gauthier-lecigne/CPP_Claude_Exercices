@@ -29,7 +29,57 @@
 #include <iostream>
 
 int main() {
-    // TODO
-
-    return 0;
+    int hauteur;
+    do {
+        std::cout << "Hauteur (1-20) : ";
+        std::cin >> hauteur;
+    } while (hauteur < 1 || hauteur > 20);
+    
+    
+    //triangle normal
+    for (int i = 1; i <= hauteur; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            std::cout << "*";
+        }
+        std::cout << "\n";
+    }
+    
+    std::cout << "\n";
+    
+    //triangle inversee
+    for (int i = hauteur; i >= 0; i--) {
+        for (int j = 1; j <= i; j++) {
+            std::cout << "*";
+        }
+        std::cout << "\n";
+    }
+    
+    std::cout << "\n";
+    
+    
+    //Pyramide centrée
+    for (int i = 1; i <= hauteur; i++) {
+        int ecart = hauteur - i;
+        for (int j = 1; j <= ecart; j++) {
+            std::cout << " ";
+        }
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            std::cout << "*";
+        }
+        std::cout << "\n";
+    }
+    
+    std::cout << "\n";
+    
+    //Pyramide centrée inversée
+    for (int i = hauteur; i >= 1; i--) {
+        int ecart = hauteur - i;
+        for (int j = 1; j <= ecart; j++) {
+            std::cout << " ";
+        }
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            std::cout << "*";
+        }
+        std::cout << "\n";
+    }
 }
