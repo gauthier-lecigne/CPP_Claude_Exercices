@@ -32,8 +32,96 @@
 
 #include <iostream>
 
-int main() {
-    // TODO
+void afficherMenu() {
+    std::cout << "=== MENU ===" << "\n";
+    std::cout << "1. PGCD de deux nombres" << "\n";
+    std::cout << "2. Convertir des km en miles" << "\n";
+    std::cout << "3. Afficher un rectangle d'etoiles" << "\n";
+    std::cout << "0. Quitter" << "\n";
+}
 
-    return 0;
+int lireChoix() {
+    int userChoice;
+    afficherMenu();
+    std::cout << "Choix : ";
+    std::cin >> userChoice;
+    while (userChoice < 0 || userChoice > 3) {
+        afficherMenu();
+        std::cout << "Choix : ";
+        std::cin >> userChoice;
+    }
+    return userChoice;
+}
+
+int pgcd(int a, int b) {
+    while(b != 0) {
+        int reste;
+        reste = a % b;
+        a = b;
+        b = reste;
+    }
+    return a;
+}
+
+
+double kmVersMiles(double km) {
+    double miles = km * 0.621371;
+    return miles;
+}
+
+
+void afficherRectangle(int largeur, int hauteur) {
+    for (int i = 0; i < hauteur; i++) {
+        for (int j = 0; j < largeur; j++) {
+            std::cout << "*" << " ";
+        }
+        std::cout << "\n";
+    }
+}
+
+
+int main() {
+    int choix;
+    do {
+        choix = lireChoix();
+        switch (choix)
+        {
+        case 0:
+            break;
+        
+        case 1:
+            int a;
+            std::cout << "Nombre 1 : ";
+            std::cin >> a;
+            
+            int b;
+            std::cout << "Nombre 2 : ";
+            std::cin >> b;
+            
+            std::cout << pgcd(a,b) << "\n";
+            break;
+            
+        
+        case 2:
+            double km;
+            std::cout << "Nombre de Km : ";
+            std::cin >> km;
+            
+            std::cout << kmVersMiles(km) << "\n";
+            break;
+        
+        case 3:
+            int largeur;
+            std::cout << "Largeur : ";
+            std::cin >> largeur;
+            
+            int hauteur;
+            std::cout << "Hauteur : ";
+            std::cin >> hauteur;
+            
+            afficherRectangle(largeur, hauteur);
+            std::cout << "\n";
+            break;
+            }
+        } while (choix != 0);
 }
